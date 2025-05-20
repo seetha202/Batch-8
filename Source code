@@ -1,0 +1,29 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the CSV file
+df = pd.read_csv('global_traffic_accidents.csv')
+
+# Display the first few rows
+print("Preview of dataset:")
+print(df.head())
+
+# Display basic information about the dataset
+print("\nDataset Info:")
+print(df.info())
+
+# Check for date/year column and plot number of accidents by year (example)
+if 'Year' in df.columns or 'year' in df.columns:
+    year_col = 'Year' if 'Year' in df.columns else 'year'
+    accidents_by_year = df[year_col].value_counts().sort_index()
+
+    plt.figure(figsize=(10, 6))
+    accidents_by_year.plot(kind='bar')
+    plt.title('Number of Traffic Accidents by Year')
+    plt.xlabel('Year')
+    plt.ylabel('Number of Accidents')
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+else:
+    print("\nNo 'Year' column found. Please 
