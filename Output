@@ -1,0 +1,45 @@
+Preview of dataset:
+  Accident ID        Date   Time           Location   Latitude   Longitude  \
+0    b0dd6f57  2023-04-19  06:39      Mumbai, India  13.488432  -73.290682   
+1    debfad09  2023-01-17  02:47  São Paulo, Brazil -37.798317  -32.244242   
+2    6d69aa36  2024-04-09  02:55  Sydney, Australia  33.767869  104.869018   
+3    425bb1f0  2023-10-10  11:23       Tokyo, Japan  -0.378031 -165.825855   
+4    90d5cf62  2023-01-02  12:07     Beijing, China  41.254879  -30.776959   
+
+  Weather Condition Road Condition  Vehicles Involved  Casualties  \
+0              Snow          Snowy                  5           7   
+1             Clear            Icy                  4           1   
+2              Rain          Snowy                  1           7   
+3             Storm            Wet                  4           0   
+4             Storm          Snowy                  3           9   
+
+              Cause  
+0  Reckless Driving  
+1     Drunk Driving  
+2  Reckless Driving  
+3     Drunk Driving  
+4  Reckless Driving  
+
+Dataset Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 10000 entries, 0 to 9999
+Data columns (total 11 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   Accident ID        10000 non-null  object 
+ 1   Date               10000 non-null  object 
+ 2   Time               10000 non-null  object 
+ 3   Location           10000 non-null  object 
+ 4   Latitude           10000 non-null  float64
+ 5   Longitude          10000 non-null  float64
+ 6   Weather Condition  10000 non-null  object 
+ 7   Road Condition     10000 non-null  object 
+ 8   Vehicles Involved  10000 non-null  int64  
+ 9   Casualties         10000 non-null  int64  
+ 10  Cause              10000 non-null  object 
+dtypes: float64(2), int64(2), object(7)
+memory usage: 859.5+ KB
+None
+
+No 'Year' column found. Please specify which column to use for time-based analysis.
+Colab paid products - Cancel contracts here
